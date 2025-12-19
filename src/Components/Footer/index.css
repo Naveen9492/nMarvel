@@ -1,0 +1,127 @@
+.footer-main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 25vh;
+  padding: 20px 0px;
+  margin-top: 50px;
+  background-color: black;
+  color: #ffffff;
+  border-top: 1px solid rgb(97, 92, 92);
+}
+.top-footer {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+
+.footer-logo {
+  height: 50px;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+.footer-logo:hover {
+  transform: scale(1.5);
+}
+
+.collection-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.foter-logo-second {
+  height: 40px;
+  width: 40px;
+  margin-right: 15px;
+}
+.para-div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.footer-para1 {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0px;
+  margin: 0px;
+}
+.footer-para2 {
+  font-size: 15px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.follow-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.follow-text {
+  font-size: 15px;
+  font-weight: bold;
+  color: #898686;
+}
+
+.follow-icon-div {
+  display: flex;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+.social-icon {
+  font-size: 24px;
+  color: #fff; /* default color */
+  transition: color 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+
+.social-icon:hover {
+  transform: scale(2); /* subtle zoom */
+}
+
+/* Brand-specific hover colors */
+.social-icon.facebook:hover {
+  color: #1877f2;
+}
+
+.social-icon.twitter:hover {
+  color: #1da1f2;
+}
+
+.social-icon.instagram:hover {
+  color: #e1306c;
+}
+
+.social-icon.youtube:hover {
+  color: #ff0000;
+}
+
+.social-icon.linkedin:hover {
+  color: #0077b5;
+}
+
+.social-icon.snapchat:hover {
+  color: #fffc00;
+}
+.bottom-footer {
+  display: flex;
+  justify-content: space-evenly;
+}
+.bottom-text {
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-right: 10px;
+  transition: color 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+.bottom-text.naveen:hover {
+  transform: scale(1.25) translateY(-5px);
+  color: #e00000;
+}

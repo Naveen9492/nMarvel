@@ -1,0 +1,120 @@
+.home-main-container {
+  font-family: "Trebuchet MS";
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color: black;
+  min-height: 85vh;
+}
+.carousel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 70vh;
+  width: 100%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.slide-image {
+  height: 400px;
+  width: 100%;
+  border-radius: 25px;
+  transform: scale(0.7);
+  opacity: 0;
+  transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+}
+
+.slide-image-loaded {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.slide-name {
+  color: #918a8a;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  height: 40px;
+}
+.nav-icon {
+  color: #918a8a;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: transparent;
+  font-size: 20px;
+}
+.nav-button {
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.home-card-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.banner-card {
+  background-color: #530707;
+  border: 1px solid #530707;
+  border-radius: 8px;
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.banner-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px 4px rgba(163, 3, 3, 0.5); /* stronger shadow on hover */
+}
+
+.banner-head {
+  font-family: "Trebuchet MS";
+  font-weight: bold;
+  color: #fffdfc;
+  font-size: 25px;
+  text-align: center;
+}
+
+.banner-para {
+  font-family: "Trebuchet MS";
+  color: rgb(205, 198, 198);
+  font-size: 15px;
+  text-align: center;
+}
+
+@media screen and (max-width: 576px) {
+  .carousel-container {
+    height: 35vh;
+  }
+  .slide-name {
+    font-size: 15px;
+  }
+  .slide-image {
+    height: 120px;
+  }
+  .nav-icon {
+    font-size: 12px;
+  }
+  .banner-head {
+    font-size: 16px;
+  }
+
+  .banner-para {
+    font-size: 10px;
+  }
+  .home-card-container {
+    padding-top: 0px;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 8px;
+  }
+}

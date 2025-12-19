@@ -1,0 +1,13 @@
+.video-container {
+  width: 98%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.video {
+  height: 90%;
+  width: 50%;
+  border: none;
+  border-radius: 5px;
+}

@@ -1,0 +1,91 @@
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+  width: 100%;
+  background-color: #000000;
+}
+.movie-details-div {
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000000;
+  font-family: "Trebuchet MS";
+}
+.banner-image {
+  width: 100%;
+  height: 200px;
+}
+
+.movie-overview-poster-div {
+  width: 98%;
+  margin: 20px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.overview-div {
+  width: 75%;
+  background-color: #050505;
+  border: 1px solid #c20707;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.overview-heading {
+  font-size: 35px;
+  font-weight: bold;
+  color: #c20707;
+  animation: tracking-in-expand 2s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.overview-para {
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+}
+.cast-details-div {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.cast-card {
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+}
+.cast-heading {
+  font-size: 15px;
+  font-weight: bold;
+  color: #c20707;
+}
+.cast-para {
+  font-size: 13px;
+  color: #ffffff;
+}
+.movie-details-poster {
+  width: 20%;
+  height: 90%;
+  border-radius: 20px;
+}
