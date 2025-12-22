@@ -12,10 +12,16 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  height: 70vh;
+  height: 67vh;
   width: 100%;
   padding-top: 25px;
   padding-bottom: 25px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .carousel-container {
+    height: 48vh;
+  }
 }
 .slide-image {
   height: 400px;
@@ -65,6 +71,13 @@
   padding-bottom: 25px;
 }
 
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .home-card-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+
 .banner-card {
   background-color: #530707;
   border: 1px solid #530707;
@@ -94,10 +107,11 @@
 
 @media screen and (max-width: 576px) {
   .carousel-container {
-    height: 35vh;
+    height: 22vh;
   }
   .slide-name {
     font-size: 15px;
+    margin: 0px;
   }
   .slide-image {
     height: 120px;
@@ -116,5 +130,8 @@
     padding-top: 0px;
     grid-template-columns: repeat(1, 1fr);
     gap: 8px;
+  }
+  .slide-navigation-div {
+    height: 10px;
   }
 }
