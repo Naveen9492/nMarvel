@@ -1,5 +1,6 @@
 import { getMovieById } from "../Resources";
 import { ThreeDots } from "react-loader-spinner";
+import { Link } from "react-router-dom";
 import { Component } from "react";
 import Trailer from "../Trailer";
 import Footer from "../Footer";
@@ -84,6 +85,11 @@ class MovieDetailsPage extends Component {
           />
         </div>
         <Trailer trailerUrl={trailerUrl} />
+        <Link to="/movies" className="back-button-nav">
+          <button type="button" className="back-button">
+            Back to Movies
+          </button>
+        </Link>
         <Footer />
       </div>
     );

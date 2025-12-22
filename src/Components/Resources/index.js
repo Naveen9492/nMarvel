@@ -349,7 +349,7 @@ const moviesList = [
       "https://cdn.marvel.com/content/1x/captainmarvel_lob_fea_dsk_new_0.jpg",
     overview:
       "The story follows Carol Danvers as she becomes one of the universe’s most powerful heroes when Earth is caught in the middle of a galactic war between two alien races. Set in the 1990s, 'Captain Marvel' is an all-new adventure from a previously unseen period in the history of the Marvel Cinematic Universe.",
-    trailerUrl: "https://www.youtube.com/embed/QyUE4xibgAM?si=OpKmxyLvyiMS8Jyp",
+    trailerUrl: "https://www.youtube.com/embed/0LHxvxdRnYc?si=U7rIVt0OnLNNx5yf",
     director: "Anna Boden, Ryan Fleck",
     writer: "Anna Boden, Ryan Fleck, Geneva Robertson-Dworet",
     runTime: 124,
