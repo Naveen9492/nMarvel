@@ -51,7 +51,7 @@ const Carousel = (props) => {
   };
 
   return (
-    <Slider {...settings}>
+    <Slider {...settings} className="carousel-content">
       {bgImagesList.map((eachBg) => (
         <div key={eachBg.id} className="slide-content">
           <img
