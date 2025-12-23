@@ -1,0 +1,71 @@
+.carousel-image {
+  width: 100%;
+  height: 440px; /* adjust as needed */
+  display: block;
+  transition: opacity 2s ease-in-out;
+  opacity: 0;
+  border-radius: 10px 10px 0px 10px;
+}
+
+/* Text fade */
+.carousel-movie-name {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 2s ease-in-out, transform 0.3s ease-in-out,
+    color 0.3s ease-in-out;
+  cursor: pointer;
+  text-align: right;
+}
+.carousel-movie-name:hover {
+  transform: scale(1.03);
+  color: rgb(148, 3, 3);
+}
+
+/* Animate when slide is active */
+.slick-active .slide-content .carousel-movie-name {
+  opacity: 1;
+}
+.slick-active .slide-content .carousel-image {
+  opacity: 1;
+}
+/* Tablet styles */
+@media (max-width: 1024px) {
+  .carousel-image {
+    height: 360px; /* slightly smaller for tablets */
+  }
+  .carousel-movie-name {
+    font-size: 18px;
+    bottom: 15px;
+    right: 15px;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .carousel-image {
+    height: 250px; /* smaller for mobile */
+    border-radius: 10px 10px 0 0; /* adjust radius if needed */
+  }
+  .carousel-movie-name {
+    font-size: 16px;
+    bottom: 10px;
+    right: 10px;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .carousel-image {
+    height: 180px; /* very small screen */
+  }
+  .carousel-movie-name {
+    font-size: 10px;
+    bottom: 6px;
+    right: 6px;
+  }
+}

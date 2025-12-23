@@ -1,11 +1,7 @@
 import Footer from "../Footer";
+import Carousel from "../Corousel";
 import { Component } from "react";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faChevronLeft,
-  faChevronRight,
-} from "@fortawesome/free-solid-svg-icons";
 import "./index.css";
 
 const bgImagesList = [
@@ -53,78 +49,10 @@ const bgImagesList = [
 ];
 
 class Home extends Component {
-  state = { imageId: bgImagesList[0].id, fade: true };
-
-  getImageUrl = (id) => {
-    const imageUrl = bgImagesList.find(
-      (eachImage) => eachImage.id === id
-    ).imageUrl;
-    return imageUrl;
-  };
-
-  getImageName = (id) => {
-    const imageName = bgImagesList.find(
-      (eachImage) => eachImage.id === id
-    ).name;
-    return imageName;
-  };
-
-  onClickLeftIcon = () => {
-    const { imageId } = this.state;
-    const currentIndex = bgImagesList.findIndex((img) => img.id === imageId);
-    const newIndex =
-      currentIndex === 0 ? bgImagesList.length - 1 : currentIndex - 1;
-    this.changeImage(bgImagesList[newIndex].id);
-  };
-
-  onClickRightIcon = () => {
-    const { imageId } = this.state;
-    const currentIndex = bgImagesList.findIndex((img) => img.id === imageId);
-    const newIndex =
-      currentIndex === bgImagesList.length - 1 ? 0 : currentIndex + 1;
-    this.changeImage(bgImagesList[newIndex].id);
-  };
-
-  changeImage = (newId) => {
-    // Start fade out
-    this.setState({ fade: false }, () => {
-      setTimeout(() => {
-        this.setState({ imageId: newId, fade: true }); // fade in
-      }, 600); // match CSS transition timing
-    });
-  };
-
   render() {
-    const { imageId, fade } = this.state;
-    const imageUrl = this.getImageUrl(imageId);
-    const imageName = this.getImageName(imageId);
-
     return (
       <div className="home-main-container">
-        <div className="carousel-container">
-          <img
-            src={imageUrl}
-            alt="slide"
-            className={`slide-image ${fade ? "slide-image-loaded" : ""}`}
-          />
-          <p className="slide-name">{imageName}</p>
-          <div className="slide-navigation-div">
-            <button
-              type="button"
-              className="nav-button"
-              onClick={this.onClickLeftIcon}
-            >
-              <FontAwesomeIcon icon={faChevronLeft} className="nav-icon" />
-            </button>
-            <button
-              type="button"
-              className="nav-button"
-              onClick={this.onClickRightIcon}
-            >
-              <FontAwesomeIcon icon={faChevronRight} className="nav-icon" />
-            </button>
-          </div>
-        </div>
+        <Carousel bgImagesList={bgImagesList} />
         <div className="home-card-container">
           <div className="banner-card text-center shadow">
             <h1 className="banner-head">About Marvel</h1>
