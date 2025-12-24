@@ -1,4 +1,5 @@
 .carousel-content {
+  margin-top: 15vh;
   padding: 20px 0px;
 }
 
@@ -57,6 +58,7 @@
 /* Mobile styles */
 @media (max-width: 768px) {
   .carousel-content {
+    margin-top: 14vh;
     padding: 10px 0px;
   }
   .carousel-image {
@@ -72,8 +74,9 @@
 }
 
 /* Small mobile devices */
-@media (max-width: 480px) {
+@media (max-width: 576px) {
   .carousel-content {
+    margin-top: 9.5vh;
     padding: 5px 0px;
   }
   .carousel-image {

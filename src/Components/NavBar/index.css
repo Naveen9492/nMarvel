@@ -1,15 +1,24 @@
 .navbar-container {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
   font-family: "Trebuchet MS";
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 15vh;
-  background-color: #1c0909;
   width: 100%;
+  background-image: linear-gradient(
+    135deg,
+    #070a0f 0%,
+    #0a0e1b 50%,
+    #06080c 100%
+  );
 }
 .logo-image {
   height: 50px;
   width: 150px;
+  margin-left: 20px;
 }
 .navbar-menu-item-container {
   display: flex;
@@ -21,24 +30,24 @@
 }
 
 .navbar-menu-item {
-  font-size: 18px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  font-family: "Trebuchet MS";
+  width: 120px;
+  height: 30px;
+  font-size: 15px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #ffffff;
 }
 
 .navbar-menu-item:hover {
-  font-family: "Trebuchet MS";
   font-weight: bold;
-  font-size: 22px;
-  transition: all 0.18s ease-in-out;
+  font-size: 18px;
+  transition: all 0.3s ease-in-out;
   box-shadow: 0 0 30px rgba(236, 29, 36, 0.4);
   color: #e30e1c;
-  border: 1px solid #e30e1c;
   border-radius: 8px;
-  text-align: center;
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -54,6 +63,31 @@
 }
 .hamburger {
   display: none;
+}
+
+/* === Medium / Large screens (992px - 1199px) === */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .navbar-menu-item {
+    font-size: 15px;
+    width: 80px;
+  }
+
+  .logo-image {
+    width: 140px;
+    height: 50px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .logo-image {
+    width: 120px;
+    height: 40px;
+    margin-left: 15px;
+  }
+  .navbar-menu-item {
+    font-size: 15px;
+    width: 80px;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -77,30 +111,32 @@
   }
   .navbar-menu-item-container {
     position: fixed;
-    top: 0;
+    top: 10vh;
     right: -40%;
     width: 40%;
-    height: 100vh;
-    background-color: #1c0909;
+    height: 85vh;
+    background-image: linear-gradient(
+      135deg,
+      #070a0f 0%,
+      #0a0e1b 50%,
+      #06080c 100%
+    );
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding-top: 70px;
-    transition: right 0.3s ease-in-out;
+    padding-top: 20px;
+    transition: right 0.4s ease-in-out;
     z-index: 1000;
   }
   .open {
     right: 0%;
   }
   .navbar-menu-item {
-    font-size: 20px;
-    width: 100%;
+    width: 120px;
+    height: 35px;
     text-align: left;
     outline: none;
-  }
-  .navbar-menu-item:hover {
-    font-size: 20px;
-    box-shadow: none;
-    border: none;
+    font-size: 17px;
+    font-weight: bold;
   }
 }

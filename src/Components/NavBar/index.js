@@ -58,20 +58,6 @@ const NavBar = () => {
           <p className="navbar-menu-item">TV SHOWS</p>
         </Link>
         <Link
-          to="/news"
-          onClick={() => setOpen(false)}
-          className="nav-item-link"
-        >
-          <p className="navbar-menu-item">NEWS</p>
-        </Link>
-        <Link
-          to="/games"
-          onClick={() => setOpen(false)}
-          className="nav-item-link"
-        >
-          <p className="navbar-menu-item">GAMES</p>
-        </Link>
-        <Link
           to="/videos"
           onClick={() => setOpen(false)}
           className="nav-item-link"
